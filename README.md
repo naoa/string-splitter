@@ -6,6 +6,8 @@
 コンパイルします。
 
 ```bash
+% git clone https://github.com/naoa/string-splitter.git
+% cd string-splitter
 % make
 ```
 
