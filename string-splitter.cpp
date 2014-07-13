@@ -296,8 +296,9 @@ string_splitter(string str)
   if (!FLAGS_no_tokenize) {
     str = tokenize(str, FLAGS_mecab_dic, FLAGS_use_baseform);
   }
-  str = token_filter(str, FLAGS_token_filter.c_str(), FLAGS_use_wordnet, FLAGS_cut_prolong);
-
+  if (FLAGS_token_filter != "" || FLAGS_use_wordnet || FLAGS_cut_prolong){
+    str = token_filter(str, FLAGS_token_filter.c_str(), FLAGS_use_wordnet, FLAGS_cut_prolong);
+  }
   cout << str.c_str() << endl;
   return 0;
 }
