@@ -287,7 +287,7 @@ token_filter(const string str, const char *pattern, bool wordnet, bool prolong)
 }
 
 int
-string-splitter(string str)
+string_splitter(string str)
 {
   str = string_filter(str, FLAGS_pre_filter.c_str());
   if (!FLAGS_no_normalize) {
@@ -326,7 +326,7 @@ main(int argc,char **argv)
       if(str == "EOS"){
         break;
       }
-      string-splitter(str);
+      string_splitter(str);
     }
   } else {
     ifstream ifs(FLAGS_input.c_str());
@@ -335,7 +335,7 @@ main(int argc,char **argv)
       exit(0);
     }
     while(getline(ifs, str)){
-      string-splitter(str);
+      string_splitter(str);
     }
   }
 
