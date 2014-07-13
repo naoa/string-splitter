@@ -60,6 +60,11 @@ CentOSではたとえば、以下のようにしてインストールできま�
 % echo "dicdir = /usr/local/lib/mecab/dic/ipadic" > /usr/local/etc/mecabrc
 ```
 
+## Docker
+string-splitterとword2vecとword2vec-calcを含むDockerファイルです。
+
+https://github.com/naoa/docker-word2vec
+
 ## Author
 
 Naoya Murakami naoya@createfield.com
