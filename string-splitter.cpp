@@ -35,7 +35,7 @@
 #include <re2/re2.h>
 #include <wn.h>
 
-#include <google/gflags.h>
+#include <gflags/gflags.h>
 
 DEFINE_string(input, "", "Input file path");
 DEFINE_string(pre_filter,
@@ -306,7 +306,7 @@ string_splitter(string str)
 int
 main(int argc,char **argv)
 {
-  google::ParseCommandLineFlags(&argc, &argv, true);
+  gflags::ParseCommandLineFlags(&argc, &argv, true);
 
   if(FLAGS_h == true){
     printf("  --iuput : Input file path\n");
